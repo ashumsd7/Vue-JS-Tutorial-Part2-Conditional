@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional rendering with v-if</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <!-- Conditionals and lists -->
+
+    <div id="app"> 
+        <!--  v -f is a directives which allow us to 
+         bind it to a condition or a property whatever 
+         which reolves true or false
+        
+        v-if just attches and dettaches the element in the DOM it does not 
+
+        make tranparent or anything else like complety removes
+
+        vif remoes all elemnts : like if u write any othe rtag in side p that will be also removed 
+        -->
+        <p v-if="show">You can see me</p>
+<!-- vif looks for nearest else section -->
+        <p v-else>Hey I am else section</p>
+        <p>do u also see me</p>
+
+        <button @click="show=!show">SWITCH ME</button>
+    </div>
+
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                show: true
+
+
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

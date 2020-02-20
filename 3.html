@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do not detach it with v-show</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+ 
+
+    <div id="app"> 
+      
+        <p v-if="show">You can see me</p>
+        <p v-else>Hey I am else section</p>
+
+        <template v-if="show">
+            <h1>  Heading</h1>
+          <p>I am a template paragraph</p>  
+        </template>
+        
+        <p v-show="show">do u also see me</p>
+
+        <button @click="show=!show">SWITCH ME</button>
+    </div>
+
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                show: true
+
+
+
+            }
+        })
+
+    </script>
+
+    <!--  as we know it only detach and attach mean to say it only adds or removes the element
+    so what will u do if you want to remove purely elements I want to u wnat to hide
+that element completely -->
+</body>
+
+</html>

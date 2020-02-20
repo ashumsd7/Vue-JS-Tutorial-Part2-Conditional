@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternative of v-if</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <!-- Conditionals and lists -->
+
+    <div id="app"> 
+      
+        <p v-if="show">You can see me</p>
+<!-- vif looks for nearest else section -->
+        <p v-else>Hey I am else section</p>
+
+        <!--  templates are ignored by browsers when u go to inspect u will see only p tag over there -->
+       <!--  it is used to when we want to group many elements in if and else section -->
+        <template v-if="show">
+            <h1>  Heading</h1>
+          <p>I am a template paragraph</p>  
+        </template>
+        
+        <p>do u also see me</p>
+
+        <button @click="show=!show">SWITCH ME</button>
+    </div>
+
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                show: true
+
+
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

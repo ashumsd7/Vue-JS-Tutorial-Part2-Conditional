@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index of list by v-forr</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(ingredient,i) in ingredients">{{ ingredient }}   {{ i}}</li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                ingredients: ["meat",'fruit','cookies'],
+                persons:[
+                    { name: "max", age: 27, color:"red"},
+                    {name:"Anna", age:"dont know", color:"red"}
+                ]
+            }
+
+        });
+    </script>
+</body>
+</html>

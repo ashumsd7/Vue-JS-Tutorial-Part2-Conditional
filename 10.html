@@ -1,0 +1,43 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushing items in array</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(ingredient,i) in ingredients" :key="ingredient">{{ ingredient }}   {{ i}}</li>
+        </ul>
+
+   <button @click="ingredients.push('masala')"> Add new Item </button>
+
+
+ 
+
+
+
+
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                ingredients: ["meat",'fruit','cookies'],
+                persons:[
+                    { name: "max", age: 27, color:"red"},
+                    {name:"Anna", age:"dont know", color:"red"}
+                ]
+            }
+
+        });
+    </script>
+</body>
+</html>
